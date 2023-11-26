@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.attribution { font-size: 11px; text-align: center; color: white;}
+.attribution a { color: hsl(0, 0%, 100%); }
+
+body {
+    background-color: hsl(234, 29%, 20%);
+    color:hsl(234, 29%, 20%);
+    width: 1440px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-weight: 400;
+}
+#newsletter-sign-up {
+    background-color: hsl(0, 0%, 100%);
+    /* height: 300px; */
+    height: 80%;
+    width: 60%;
+    border-radius: 25px;
+    columns: 2;
+    padding: 2% 0% 2% 2%;
+    display: flex;
+align-content: center;
+justify-content: space-between;
+gap: 5%;
+}
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: center;
+}
+li {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+li > img {
+    padding-right: 5%;
+    height: 20px;
+    width: auto;
+}
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 60%;
+    padding-left: 3%;
+    height: 70%;
+    padding-top: 20%;
+    justify-content: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+label {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+input, button {
+    padding: 5%;
+    border: 1px solid hsl(231, 7%, 60%);
+    border-radius: 5px;
+    outline: none;
+}
+input[type=text]:focus {
+    padding: 5%;
+    border: 1px solid hsl(234, 29%, 20%);
+    border-radius: 5px;
+    color: hsl(234, 29%, 20%);
+}
+input[type='submit'], button {
+    background-color: hsl(234, 29%, 20%);
+    border: none;
+    color: hsl(0, 0%, 100%);
+    margin-top: 5%;
+    font-weight: 700;
+}
+input[type='submit']:hover, button:hover {
+    background-image: linear-gradient(to right, #fc6076, #ff9a44);
+    box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);    border: none;
+    color: hsl(0, 0%, 100%);
+    margin-top: 5%;
+}
+img {
+    width: 50%;
+}
+.column {
+    float: left;
+}
+
+#success {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+    width: 31%;
+    height: 65%;
+    background-color: white;
+    border-radius: 25px;
+    padding: 3%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+#success > img {
+    height: 15%;
+    width: 15%;
+}
+.error, .error:focus {
+    background-color: rgb(255, 189, 184);
+    border-color: hsl(4, 100%, 67%);
+    color: hsl(4, 100%, 67%); 
+}
+
+form > div {
+    display: flex;
+    justify-content: space-between;
+}
+label.error {
+    display: none;
+    background-color: white;
+
+}
+img.row {
+    display: none;
+}
+
+@media only screen and (max-width: 450px) {
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    #newsletter-sign-up {
+        width: 100%;
+        height: 100vh;
+        flex-direction: row;
+        border-radius: 0;
+        padding: 0;
+        gap: 0;
+        flex-wrap: wrap-reverse;
+        align-content: space-between;
+    }
+
+    .attribution {
+        display: none;
+    }
+
+    img.column {
+        display: none;
+    }
+
+    img.row {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .input {
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 0;
+        height: auto;
+        gap: 10px;
+        padding-bottom: 2%;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    #success {
+        width: 100%;
+        padding: 5%;
+        border-radius: 0;
+        height: 100%;
+        justify-content: center;
+    }
+    button {
+        position: absolute;
+        left: 5;
+        bottom: 2%; 
+        width: 90%;    
+    }
+}
